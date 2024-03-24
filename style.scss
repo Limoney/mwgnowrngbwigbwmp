@@ -1,0 +1,69 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+:root {
+    --tour-search-accent1: #00a8ff;
+    --tour-search-accent1-dark: #0097e6;
+    --tour-search-primary: #f5f6fa;
+    --tour-search-primary-dark: #dcdde1;
+}
+
+.wp-block-create-block-custom-search-block {
+	padding: 1rem;
+    box-shadow: 5px 5px 15px #e2e2e2;
+    background-color: var(--tour-search-primary);
+    border-radius: 5px;
+    
+    .form-fields {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .form-segment {
+        width: 100%
+    }
+    
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: none;
+        border: 0.1rem solid var(--tour-search-primary-dark);
+        box-sizing: border-box;
+        padding: 0.3rem;
+        transition: 0.25s ease-in-out all;
+        outline: none;
+        border-radius: 5px;
+    }
+    input:focus {
+        border: 0.1rem solid var(--tour-search-accent1-dark);
+    }
+    
+    [type="submit"] {
+        padding: 0.5rem 2rem;
+        background-color: var(--tour-search-accent1);
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+    }
+    [type="submit"]:hover {
+        background-color: var(--tour-search-accent1-dark);
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 35.5em)	/*≥ 568px	*/
+    {
+        
+    }
+    @media screen and (min-width: 48em)	    /*≥ 768px	*/
+    {
+        .form-fields {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
